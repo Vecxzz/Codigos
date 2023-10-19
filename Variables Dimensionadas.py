@@ -1,5 +1,7 @@
 """Variables Dimensionadas"""
 
+#Comentario de prueba
+
 """1- Solicitar al usuario que ingrese números, estos deben guardarse en una lista. Para finalizar el usuario debe ingresar 0, el cual no debe guardarse."""
 numbers = []
 
