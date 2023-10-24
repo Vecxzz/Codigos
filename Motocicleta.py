@@ -2,6 +2,7 @@ class Motocicleta:
     
     #Atributo de clase
     nueva = True
+    motor = False
 
     def __init__(self, color, matricula, combustible_litros=10, numero_ruedas=2, marca="", modelo="", fecha_fabricacion="", velocidad_punta=0, peso=0):
         self.color = color
@@ -13,9 +14,8 @@ class Motocicleta:
         self.fecha_fabricacion = fecha_fabricacion
         self.velocidad_punta = velocidad_punta
         self.peso = peso    
-        self.motor = False
 
-    def arancar(self):
+    def arrancar(self):
         if self.motor:
             print("El motor ya estaba encendido")
         else:
@@ -29,17 +29,24 @@ class Motocicleta:
         else:
             print("El motor ya estaba detenido")
     
-    #Crear Motocicleta
-    miMotocicleta = Motocicleta(
-        color = "Verde",
-        matricula = "ABC123",
-        marca = "Yamaha",
-        modelo = "FZ25",
-        fecha_fabricacion = "2018",
-        velocidad_punta = 140,
-        peso = 120
-    )
+#Crear Motocicleta
+miMotocicleta = Motocicleta(
+    color = "Verde",
+    matricula = "ABC123",
+    marca = "Yamaha",
+    modelo = "FZ25",
+    fecha_fabricacion = "2018",
+    velocidad_punta = 140,
+    peso = 120
+)
 
-    miMotocicleta.arrancar()
+#Arrancar y Detener
+miMotocicleta.arrancar()
+miMotocicleta.detener()
+
+#Definir Precio
+miMotocicleta.precio = 600000
+
+print(f"El precio de esta motocicleta es ${miMotocicleta.precio}") 
 
     
