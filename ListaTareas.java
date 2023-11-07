@@ -82,3 +82,40 @@ public class ListaTareas{
         
     }
 }
+
+
+//Matrices
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        //Crear Scanner
+        Scanner sc = new Scanner(System.in);
+        
+        //Crear Matriz
+        System.out.print("Ingrese el número de filas de la matriz: ");
+        int filas = sc.nextInt();
+        
+        System.out.print("Ingrese en número de columnas de la matriz: ");
+        int columnas = sc.nextInt();
+        
+        int[][] matriz = new int[filas][columnas];
+        
+        System.out.println("Ingrese los valores para la matriz:");
+        
+        for (int i = 0; i < filas; i++){
+            for (int j = 0; j < columnas; j++){
+                System.out.print("Ingrese el valor para la posición [" + i + "][" + j + "]: ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println("La matriz ingresada es: ");
+        
+        for (int i = 0; i < filas; i++){
+            for (int j = 0; j < columnas; j++){
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
